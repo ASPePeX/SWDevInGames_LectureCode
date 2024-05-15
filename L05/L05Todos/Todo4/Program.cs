@@ -18,7 +18,7 @@
         public int Number;
     }
 
-    public class XAttribute : Attribute { }
+    public class ClassInfoAttribute : Attribute { }
     public class MethodInfoAttribute : Attribute { }
     public class ParamInfoAttribute : Attribute { }
     public class FieldInfoAttribute : Attribute { }
