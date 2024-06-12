@@ -4,14 +4,14 @@ namespace Wikipedia;
 
 public interface IVisitor
 {
-    void Visit(Literal literal);  
+    void Visit(Literal literal);
     void Visit(Addition addition);
 }
 
 public interface IExpression
 {
     public void Accept(IVisitor v);
-   
+
     public double GetValue();
 }
 
@@ -29,7 +29,7 @@ public class ExpressionPrintingVisitor : IVisitor
         var sum = addition.GetValue();
         Console.WriteLine("{0} + {1} = {2}", leftValue, rightValue, sum);
     }
- }
+}
 
 
 
@@ -46,7 +46,7 @@ public class Literal : IExpression
     {
         v.Visit(this);
     }
- 
+
     public double GetValue()
     {
         return Value;
@@ -70,7 +70,7 @@ public class Addition : IExpression
         Right.Accept(v);
         v.Visit(this);
     }
-  
+
     public double GetValue()
     {
         return Left.GetValue() + Right.GetValue();
