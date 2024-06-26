@@ -13,4 +13,9 @@ public class SceneNode : ISceneNode
     SceneComponents = new List<ISceneComponent>();
     SceneNodes = new List<ISceneNode>();
   }
+
+  public void Accept(IVisitor visitor)
+  {
+    visitor.Visit(this);
+  }
 }

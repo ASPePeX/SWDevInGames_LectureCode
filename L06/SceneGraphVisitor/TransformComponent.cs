@@ -11,4 +11,9 @@ public class TransformComponent : ISceneComponent
     Name = name;
     Position = position;
   }
+
+  public void Accept(IVisitor visitor)
+  {
+    visitor.Visit(this);
+  }
 }

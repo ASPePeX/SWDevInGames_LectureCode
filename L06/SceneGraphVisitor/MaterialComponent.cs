@@ -9,4 +9,9 @@ public class MaterialComponent : ISceneComponent
     Name = name;
     Color = color;
   }
+
+  public void Accept(IVisitor visitor)
+  {
+    visitor.Visit(this);
+  }
 }

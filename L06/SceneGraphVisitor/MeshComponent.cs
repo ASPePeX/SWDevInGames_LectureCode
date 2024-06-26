@@ -9,4 +9,9 @@ public class MeshComponent : ISceneComponent
     Name = name;
     Vertices = vertices;
   }
+
+  public void Accept(IVisitor visitor)
+  {
+    visitor.Visit(this);
+  }
 }

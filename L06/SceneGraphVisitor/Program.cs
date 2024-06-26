@@ -33,7 +33,7 @@ var scene = new SceneNode("Root");
 
   var sceneComp22Mat = new MaterialComponent("green");
   var sceneComp22Mesh1 = new MeshComponent(12859, "Rocket Mesh Green 1");
-  var sceneComp22Mesh2 = new MeshComponent(76356, "Rocket Mesh Green 1");
+  var sceneComp22Mesh2 = new MeshComponent(76356, "Rocket Mesh Green 2");
 
   var sceneComp3Trans = new TransformComponent(new Vector2(3, 7));
   var sceneComp3Mat = new MaterialComponent("blue");
@@ -53,6 +53,6 @@ var scene = new SceneNode("Root");
 
 Console.WriteLine("Start Visiting");
 
-
+new DebugVisitor().Visit(scene);
 
 Console.WriteLine("Done Visiting");

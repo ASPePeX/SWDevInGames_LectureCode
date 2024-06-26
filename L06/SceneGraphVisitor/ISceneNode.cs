@@ -1,4 +1,4 @@
-public interface ISceneNode
+public interface ISceneNode : IVisitable
 {
-  public string Name { get; set; }
+
 }
